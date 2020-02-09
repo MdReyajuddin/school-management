@@ -1,0 +1,70 @@
+{% extends 'base.html'%}
+{% block body%}
+
+<div class="container">
+    <h2 class="text-bold m-auto">Details of Student</h2>
+<hr>
+    <div class="row m-auto p-3">
+        <div class="col-6 ">
+            {%if data%}
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                <tr class="text-center">
+                    <th scope="col">Item</th>
+                    <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                  <tbody>
+                <tr class="text-center">
+                    <td scope="row">Id:</td>
+                    <td scope="row">{{data.id}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Id_pic:</td>
+                    <td scope="row">{{data.id_pic}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Name:</td>
+                    <td scope="row">{{data.name}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Email:</td>
+                    <td scope="row">{{data.email}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Contact No:</td>
+                    <td scope="row">{{data.contact_no}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Class:</td>
+                    <td scope="row">{{data.classes}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Address:</td>
+                    <td scope="row">{{data.address}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Section:</td>
+                    <td scope="row">{{data.section}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Pincode:</td>
+                    <td scope="row">{{data.pincode}}</td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Category:</td>
+                    <td scope="row">{{data.category}}</td>
+                </tr>
+
+
+                 </tbody>
+               </table>
+             {% else %}
+                <h1>No Data Found</h1>
+                {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock%}
+
+

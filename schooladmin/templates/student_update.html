@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% block body%}
+{% include 'alerts.html' %}
+
+<div class="container">
+    <h3 class="text-bold m">Update</h3>
+<hr>
+    <div class="row m-auto p-3">
+        <div class="col-6 ">
+        <form method="POST" action="/studentupdate/{{data.id}}" >
+            {% csrf_token %}
+             <table class="table table-bordered">
+                <thead class="thead-dark">
+                <tr class="text-center">
+                    <th scope="col">Item</th>
+                    <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                  <tbody>
+                <tr class="text-center">
+                    <td scope="row">Id:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.id}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">pic:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.pic}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Name:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.name}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Email:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.email}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Contact No:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.contact_no}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Class:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.classes}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Address:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.address}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Section:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.section}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Pincode:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.pincode}}"></td>
+                </tr>
+                <tr class="text-center">
+                    <td scope="row">Category:</td>
+                    <td scope="row"><input type="text" name="name" value="{{data.category}}"></td>
+                </tr>
+
+
+                 </tbody>
+               </table>
+            <input type="submit" name="" class="btn btn-dark" value="Update"><br><br>
+        </form>
+   </div>
+ </div>
+</div>
+{% endblock %}

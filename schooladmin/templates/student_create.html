@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block body%}
+{% include 'alerts.html' %}
+<div class="container">
+  <h3 >General Details</h3>
+<hr>
+    <div class="row ">
+        <div class="col-6 ">
+        <form method="POST" class="form-group" >
+            {% csrf_token %}
+            <table class="table table-bordered text-center">
+                 <thead class="thead-dark">
+                <tr class="text-center">
+                    <th scope="col">Item</th>
+                    <th scope="col">Value</th>
+                    </tr>
+                </thead>
+            {{ form.as_table }}
+            </table>
+            <input type="submit" class="btn btn-dark" value="submit">
+        </form>
+  </div>
+
+ </div>
+</div>
+{% endblock%}

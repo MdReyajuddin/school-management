@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block body%}
+  <div class="container">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+            <div class="col-12 ">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Log In</h1><hr>
+
+        <form method="POST" class="form-group" action="{% url 'homedata'%}" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-outline-dark" value="Login">
+        </form>
+        </div><hr>
+              <div class="text-center">
+                <a class="small" href="#">Forget Password?</a>
+              </div>
+
+            </div>
+          </div>
+
+
+ {% endblock%}

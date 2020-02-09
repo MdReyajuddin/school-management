@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block body%}
+{% include 'alerts.html' %}
+<div class="container">
+    <h2 class="text-bold m-auto">Delete Student</h2>
+<hr>
+    <div class="row m-auto p-3">
+        <div class="col-6 ">
+        <form method="POST">
+            {% csrf_token %}
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                <tr class="text-center">
+                    <th scope="col">Are You Sure Want to Delete &nbsp<span class="text-bold ">{{data.name|upper}}</span> &nbsp details</th>
+                    </tr>
+                </thead>
+                  <tbody>
+                <tr class="text-center">
+                    <td scope="row"><button type="submit" class="btn btn-danger">Delete</button>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        <button type="submit" class="btn btn-success"  href="/">Cancel</button> </td>
+
+                </tr>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block body%}
+
+<div class="container">
+  <h3 >Contact Us</h3>
+<hr>
+    <div class="row ">
+        <div class="col-5 ">
+        <form method="POST" class="form-group" >
+            {% csrf_token %}
+            <table class="table table-bordered text-center">
+                 <thead class="thead-dark">
+                <tr class="text-center">
+                    <th scope="col">Item</th>
+                    <th scope="col">Value</th>
+                    </tr>
+                </thead>
+            {{ form.as_table }}
+            </table>
+            <input type="submit" class="btn btn-dark" value="submit">
+        </form>
+  </div>
+         <div class="col-6 ml-auto">
+             <p><strong><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>Jayadeva Park Block N6, IRC Village, Jayadev Vihar
+Bhubaneswar, Odisha 751015</strong> </p><br><Hr>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7484.22046320218!2d85.81463527207744!3d20.295703951020993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909c4e1c9c4e5%3A0xcbaa64f4064d555c!2sJayadeva%20Park%2C%20Block%20N6%2C%20IRC%20Village%2C%20Jayadev%20Vihar%2C%20Bhubaneswar%2C%20Odisha%20751015!5e0!3m2!1sen!2sin!4v1580876780254!5m2!1sen!2sin" width="500" height="300" frameborder="0" class="border border-5" allowfullscreen=""></iframe>
+  </div>
+
+ </div>
+</div>
+{% endblock%}
